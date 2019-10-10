@@ -23,7 +23,9 @@ select:focus {
   text-decoration: none;
   background: #2979ff;
   padding: 20px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   width: 20%;
 }
