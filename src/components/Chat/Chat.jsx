@@ -7,6 +7,7 @@ import './Chat.css';
 import InfoBar from '../InfoBar/InfoBar';
 import Messages from '../Messages/Messages';
 import Input from '../Input/Input';
+import { helper } from '../../helpers/helper';
 
 let socket;
 
@@ -16,7 +17,7 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = 'https://epic-chat-app.herokuapp.com/';
+  const ENDPOINT = helper.getChatServerUrl();
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
