@@ -1,6 +1,5 @@
 const getChatServerUrl = () => {
-  const localUrl = "http://localhost:5000";
-  return process.env.NODE_ENV === 'production' ? process.env.CHAT_SERVER_URL : localUrl;
+  return 'https://epic-chat-app.herokuapp.com/';
 };
 
 export const helper = {
