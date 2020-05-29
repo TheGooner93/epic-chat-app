@@ -1,7 +1,6 @@
 const getChatServerUrl = () => {
   const localUrl = "http://localhost:5000";
-  console.log(process.env);
-  return process.env.CHAT_SERVICE_URL ? process.env.CHAT_SERVICE_URL : localUrl;
+  return process.env.NODE_ENV === 'production' ? process.env.CHAT_SERVER_URL : localUrl;
 };
 
 export const helper = {
